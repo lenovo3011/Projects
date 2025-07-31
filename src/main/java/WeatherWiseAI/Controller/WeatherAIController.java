@@ -20,7 +20,7 @@ public class WeatherAIController {
 		return m.genAI(w) ;
 		
 	}
-	@GetMapping("/home")
+	@GetMapping("/")
 	public String home () {
 		return "Hello" ;
 	}
