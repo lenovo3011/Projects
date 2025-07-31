@@ -22,7 +22,7 @@
 # EXPOSE 8080
 # ENTRYPOINT ["java", "-jar", "WeatherWiseAI.jar"]
 # Stage 1: Build
-FROM maven:3.9.5-openjdk-21 AS build
+FROM jelastic/maven:3.9.5-openjdk-21 AS build
 
 WORKDIR /app
 COPY . /app
