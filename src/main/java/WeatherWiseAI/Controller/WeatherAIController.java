@@ -24,5 +24,10 @@ public class WeatherAIController {
 	public String home () {
 		return "Hello" ;
 	}
+	
+	@GetMapping("/greetme") 
+	public String greet () {
+		return m.greetMe() ;
+	}
 
 }
