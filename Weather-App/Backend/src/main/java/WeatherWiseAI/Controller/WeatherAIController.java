@@ -21,12 +21,9 @@ public class WeatherAIController {
 		return m.genAI(w) ;
 		
 	}
-	@GetMapping("/")
-	public String home () {
-		return "Hello" ;
-	}
 	
-	@GetMapping("/greetme") 
+	
+	@GetMapping("/") 
 	public String greet () {
 		return m.greetMe() ;
 	}
