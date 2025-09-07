@@ -2,11 +2,10 @@ import location from './location-pin-svgrepo-com.svg' ;
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import { bg_animation } from './background_animation';
 import { useState  } from 'react';
-import { AnimationCloud, AnimationNight  } from './animation_cloud'
 import axios from 'axios';
 import { postData } from './API';
-
 import animation from './AI assistant - Animation.json' ;
 import Lottie from 'lottie-react';
 function App() {
@@ -113,23 +112,23 @@ function App() {
   }
       // useEffect(()=>{} , [OnSubmit])
 
+  let animation_bg = bg_animation(apiData?.current?.is_day) ;
+  
  
   
   return (
     
    <>  {
       console.log(apiData?.current?.is_day)}
-      
-     {apiData?.current?.is_day===1   ? <AnimationCloud/>
-      : <AnimationNight/>
-      }
+      {(animation_bg)}
+
     
     <ToastContainer/>
       <div className='main'>
         <h1>Know your city weather</h1>
         <form onSubmit={OnSubmit}>
           <label>Enter your city </label> <br/>  <img src={location} alt ='location'/>
-          <input type='text' value={formData} name='cName' onChange={(event)=>setFormData(event.target.value)}/>  <span/> <br/> 
+          <input type='text' value={formData} name='cName' disabled = {(lottie)} onChange={(event)=>setFormData(event.target.value)}/>  <span/> <br/> 
           <button>{(showAnimation) ? 'Fetching data ...' : 'Get Data'}</button>
          
         </form>
