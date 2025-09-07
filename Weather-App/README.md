@@ -9,7 +9,6 @@ Backend API: https://weatherwiseai.onrender.com/
 ## 🔧 Technologies Used
 - **Frontend**: React, HTML, CSS, Axios
 - **Backend**: Spring Boot, Java 21, REST API
-- **Database**: Oracle (or mention H2 if testing)
 - **Deployment**: Render (Frontend & Backend)
 - **Build Tools**: Maven
 
