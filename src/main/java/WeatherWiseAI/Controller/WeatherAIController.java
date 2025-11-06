@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import WeatherWiseAI.Entity.Weather_Data;
 import WeatherWiseAI.Service.AI_Service_Methods;
 @RestController
-@CrossOrigin(origins = "http://localhost:3000") 
+//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://weatherwiseai-frontend.onrender.com")
 public class WeatherAIController {
 	private AI_Service_Methods m ;
 	public WeatherAIController (AI_Service_Methods m) {
@@ -20,14 +21,12 @@ public class WeatherAIController {
 		return m.genAI(w) ;
 		
 	}
-	@GetMapping("/")
-	public String home () {
-		return "Hello" ;
-	}
 	
-	@GetMapping("/greetme") 
+	
+	@GetMapping("/") 
 	public String greet () {
 		return m.greetMe() ;
 	}
 
 }
+	

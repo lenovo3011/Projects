@@ -26,11 +26,11 @@ public class AI_Service implements AI_Service_Methods{
 		String prompt = """
 				Summarize the current weather conditions in a simple and engaging way for a general audience using the following data:
 				Location : %s , State : %s , Country : %s , Local Time : %s , Temperature : %s , Feels Like : %s , Condition : %s ,
-				Humidity : %s , Wind Speed :  %s , Wind Direction : %s Dont give the short names for wind direction
+				Humidity : %s , Wind Speed :  %s , Wind Direction : %s Dont give the short names for wind direction.
+				Here is the text for the current weather to get an idea about the weather : %s
 				The summary should be conversational and brief, as if it's a radio or app weather update. Avoid repeating data — combine them meaningfully. Keep it under 100 words.
 				""".formatted(w.getName() , w.getState() , w.getCountry() , w.getTime() , w.getTemp() , w.getFeeltemp() , w.getText() , w.getHumidity() 
-						, w.getWindSpeed() , w.getWindDir()
-					) ;
+						, w.getWindSpeed() , w.getWindDir() , w.getText()					) ;
 		
 			try {
 			

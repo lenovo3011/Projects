@@ -8,6 +8,7 @@ public class WeatherWiseAiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WeatherWiseAiApplication.class, args);
+		System.out.println(System.getProperty("java.version"));
 	}
 
 }
